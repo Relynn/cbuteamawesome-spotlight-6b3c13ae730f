@@ -1,0 +1,14 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "spotlight", root_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <% if logged_in? %>
+          <li><%= link_to "Log out", main_app.logout_path, method: 'delete' %></li>
+        <% else %>
+          <li class="login"><%= link_to "Log in", main_app.login_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>

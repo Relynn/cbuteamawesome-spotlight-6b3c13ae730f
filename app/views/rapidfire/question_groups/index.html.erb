@@ -1,0 +1,25 @@
+<body class="orange">
+  <h1>
+    Question Groups
+    <% if can_administer? %>
+      <%= link_to "New Group", new_question_group_path, class: "btn login_btn" %>
+    <% end %>
+  </h1>
+  <hr/>
+  
+  <table>
+    <colgroup>
+      <col>
+      <col width="250">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Question Group</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render partial: "question_group", collection: @question_groups %>
+    </tbody>
+  </table>
+</body>

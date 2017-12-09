@@ -1,0 +1,48 @@
+<body class="salmon">
+  <p id="notice"><%= notice %></p>
+  <head></head>
+  <h1>Presentations</h1>
+  <style>
+    td {padding-right: 30px}
+  </style>
+  </head>
+  <table>
+    <thead>
+      <tr>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% Presentation.each do |presentation| %>
+        <tr>
+          <td><%= presentation.name %></td>
+          <td><%= presentation.block_number %></td>
+          <td><%= link_to 'Show', presentation %></td>
+          <td><%= link_to 'Edit', edit_presentation_path(presentation) %></td>
+          <td><%= link_to 'Destroy', presentation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+    <table>
+    <thead>
+      <tr>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% Presentation.each do |presentation| %>
+        <tr>
+          <td><%= presentation.name %></td>
+          <td><%= presentation.block_number %></td>
+          <td><%= link_to 'Show', presentation %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+  <br>
+</body>

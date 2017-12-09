@@ -1,0 +1,24 @@
+<h1>Join a Course</h1>
+<br>
+<body class="teal">
+  <div class="col-md-6 col-md-offset-3">
+    <form>
+      <%= label :entered_course, "Enter Course ID:" %>
+      <%= text_field_tag :entered_course %>
+      <%= button_to "Join Course", {:controller => 'student_in_courses', :action => 'create'}, {class: "btn"} %>
+    </form>
+  </div>
+</body>
+<!--
+<body>
+  <div class="col-md-6 col-md-offset-3">
+    <#%= form_for(@user) do |f| %>
+      <#%= f.label :course_tokens, "Enter Course ID:" %>
+      <#%= f.text_field :name, class: 'form-control' %>
+      
+      <#%= f.submit "Create my account", class: "btn" %>
+    <#% end %>
+    </form>
+  </div>
+</body>
+-->

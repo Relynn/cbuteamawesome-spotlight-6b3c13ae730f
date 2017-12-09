@@ -1,0 +1,26 @@
+<h1>Join a Course</h1>
+<br>
+<body class="teal">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@student_in_course) do |f| %>
+     
+      <%= f.label :course_token, "Enter Course ID:" %>
+      <%= f.text_field :course_token, class: 'form-control' %>
+      
+      <%= f.submit "Join Course", class: "btn" %>
+    <% end %>
+  </div>
+</body>
+<!--
+<body>
+  <div class="col-md-6 col-md-offset-3">
+    <#%= form_for(@user) do |f| %>
+      <#%= f.label :course_tokens, "Enter Course ID:" %>
+      <#%= f.text_field :name, class: 'form-control' %>
+      
+      <#%= f.submit "Create my account", class: "btn" %>
+    <#% end %>
+    </form>
+  </div>
+</body>
+-->

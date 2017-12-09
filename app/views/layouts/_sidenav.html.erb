@@ -1,0 +1,17 @@
+<div class="sidenav">
+  <% if current_user && current_user.is_professor? %>
+    <div class="sidebar">
+      <li><%= link_to(image_tag("icon4.png", :style => 'width: 100%; height: 95%;'), main_app.create_choices_path) %></li>
+      <li><%= link_to(image_tag("icon8.png", :style => 'width: 100%; height: 95%;'), main_app.view_path) %></li>
+      <li><%= link_to(image_tag("icon10.png", :style => 'width: 100%; height: 95%;'), main_app.help_path) %></li>
+      <li><%= link_to(image_tag("icon9.png", :style => 'width: 100%; height: 95%;'), main_app.about_path) %></li>
+    </div>
+  <% else %>
+    <div class="sidebar">
+      <li><%= link_to(image_tag("icon5.png", :style => 'width: 100%; height: 95%;'), main_app.sic_new_path) %></li>
+      <li><%= link_to(image_tag("icon8.png", :style => 'width: 100%; height: 95%;'), main_app.view_path) %></li>
+      <li><%= link_to(image_tag("icon10.png", :style => 'width: 100%; height: 95%;'), main_app.help_path) %></li>
+      <li><%= link_to(image_tag("icon9.png", :style => 'width: 100%; height: 95%;'), main_app.about_path) %></li>
+    </div>
+  <% end %>
+</div>

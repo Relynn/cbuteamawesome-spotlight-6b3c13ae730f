@@ -1,0 +1,18 @@
+<!--<div class="center jumbotron">-->
+<body class="home">
+  <div class="center">
+    <h1><img src="/assets/spotlight_main_logo.jpg" alt="Spotlight logo" style="max-height: 50%; max-width: 50%"/></h1>
+    
+    <% if logged_in? %>
+      <%= link_to "Home", current_user, class: "btn login_btn" %>
+    <% else %>
+      <div>
+        <%= link_to "Student Sign Up", signup_path(selected_role: 0), class: "btn"  %>
+        <%= link_to "Professor Sign Up", signup_path(selected_role: 1), class: "btn" %>
+        <div>
+          <%= link_to "Log in", login_path, class: "btn login_btn" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</body>

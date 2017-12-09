@@ -1,0 +1,284 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+
+
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/* universal */
+.container {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
+
+.push {
+  height: 20em;
+}
+
+body {
+  width: 90%;
+  //float: right;
+  padding-top: 60px;
+  margin-bottom: 30px;
+}
+
+.span{
+  margin-left:0px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+/* Removes spin buttons */
+
+form input[type='number']::-webkit-outer-spin-button,
+form input[type='number']::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
+/* header */
+.navbar {
+  background-color: #D6DBDE;
+  border-color: #D6DBDE;
+  &:nav.a {
+    color: white;
+    &:hover {
+      color: #78BBBE;
+    }
+  }
+}
+
+#logo {
+  float: left;
+  margin-top: 9px;
+  margin-right: 10px;
+  font-size: 2.3em;
+  color: #F3A121;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* sidebar */
+.sidebar {
+  margin-top: 0.5em;
+  width: 8%;
+  height: 100%;
+  float: left;
+  list-style-type: none;
+  background: #D6DBDE;
+  border-radius: 40px/40px ;
+  overflow: hidden;
+}
+
+/* footer */
+
+footer {
+  background-color: #D6DBDE;
+  max-width: 100%;
+  margin-top: 100px;
+  padding-top: 5px;
+  border-top: 1px solid #D6DBDE;
+  color: $gray-light;
+  a {
+    color: black;
+    &:hover {
+      color: white;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    margin-right: 15px;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+/* sidebar */
+
+aside {
+  section.user_info {
+    margin-top: 20px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit {
+  margin-top: 15px;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  background-color: #D6DBDE;
+  border: 1px solid #bbb;
+  width: 90%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+/* log in buttons */
+
+.btn {
+  color: #fff;
+  width: 220px;
+  height: 2.5em;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #F3A121;
+}
+
+.btn-wide {
+  width: 100%;
+}
+
+.login_btn {
+  background-color: #78BBBE;
+}
+
+
+div.form{
+    display: block;
+    text-align: center;
+}
+/*
+form{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+*/
+
+.radio {
+  vertical-align: middle;
+  margin: 2px;
+  margin-left: 5%;
+}

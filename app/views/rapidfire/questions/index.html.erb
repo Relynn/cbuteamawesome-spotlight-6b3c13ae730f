@@ -1,0 +1,24 @@
+<body class="orange">
+  <h1>
+    Questions
+    <%= link_to "New Question", new_question_group_question_path(@question_group), class: "btn login_btn" %>
+  </h1>
+  <hr/>
+  
+  <table>
+    <colgroup>
+      <col>
+      <col width="250">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render partial: "question", collection: @questions %>
+    </tbody>
+  </table>
+    <%= link_to 'Back to Question Groups', question_groups_path %>
+</body>

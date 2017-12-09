@@ -1,0 +1,62 @@
+<body class="salmon">
+  <h1>New Presentation Block</h1>
+  
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(@presentation_block) do |f| %>
+        
+        <%= f.label :name, "Name for this presentation block" %>
+        <%= f.text_field :name, class: 'form-control' %>
+        
+        <%= f.label :month, "Select a month" %>
+        <%= f.number_field :month, class: 'form-control' %>
+        
+        <%= f.label :day, "Select a day" %>
+        <%= f.number_field :day, class: 'form-control' %>
+      
+        <%= f.label :block_sections, "How many individual presentations will there be?" %>
+        <%= f.number_field :block_sections, class: 'form-control' %>
+        
+        <!--
+        <%= f.label :block_start, "Select the date for the presentations:" %>
+        <div>
+          <input id="pickadate" type="text" class="datepicker">
+        </div>
+    
+        <script type="text/javascript">
+          $('.datepicker').pickadate();
+        </script>
+        
+        <%= f.label :block_start, "What time will the first one start?" %>
+        <div class="bootstrap-timepicker">
+          <input id="timepicker1" type="text" class="input-small">
+          <i class="icon-time"></i>
+        </div>
+        <script type="text/javascript">
+          $('#timepicker1').timepicker({
+              template: false,
+              showInputs: false,
+              minuteStep: 5
+          });
+        </script>
+        
+        <%= f.label :block_start, "What time will the last one end?" %>
+        <div class="bootstrap-timepicker">
+          <input id="timepicker2" type="text" class="input-small">
+          <i class="icon-time"></i>
+        </div>
+        <script type="text/javascript">
+          $('#timepicker2').timepicker({
+              template: false,
+              showInputs: false,
+              minuteStep: 5
+          });
+        </script>
+      -->
+      
+        <%= f.submit "Create Presentation Block", class: "btn" %>
+      <% end %>
+    </div>
+  </div>
+  <%= link_to 'Back', presentation_blocks_path %>
+</body>

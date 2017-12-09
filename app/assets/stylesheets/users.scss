@@ -1,0 +1,74 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// body color for professor and student home page
+
+.home {
+  width: 100%;
+
+}
+
+.teal {
+  background-color: #78BBBE;
+}
+
+.show {
+  background-color: black;
+  width: 100%;
+}
+
+.view {
+  background-color: black;
+}
+
+.row_prof {
+  .welcome {
+    h1 {
+      text-align: right;
+    }
+    color: #EB5848;
+    float: right;
+    width: 15%;
+  }
+  .student_welcome {
+    h1 {
+      text-align: right;
+    }
+    color: #F3A121;
+    float: right;
+    width: 15%;
+  }
+}
+.professor {
+  width: 80%;
+  margin-top: 20px;
+  margin-left: 20%;
+  margin-right: 50%;
+  padding: 15px;
+  a {
+    color: #fff;
+    &:hover {
+      color: #EB5848;
+      text-decoration: none;
+    }
+  }
+}
+.space {
+  margin-top: 3em;
+}
+.student {
+  width: 80%;
+  margin-top: 20px;
+  margin-left: 20%;
+  margin-right: 50%;
+  padding: 15px;
+  a {
+    color: #fff;
+    &:hover {
+      color: #F3A121;
+      text-decoration: none;
+    }
+  }
+}
+

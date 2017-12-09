@@ -1,0 +1,21 @@
+<body class="teal">
+  <h1>
+    Create Course
+    <%= link_to 'My Courses', courses_path, class: 'btn' %>
+    </h1>
+  
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(@course) do |f| %>
+        
+        <%= f.label :name, "Course Name" %>
+        <%= f.text_field :name, class: 'form-control' %>
+        
+        <%= f.label :section, "Course Section" %>
+        <%= f.text_field :section, class: 'form-control' %>
+  
+        <%= f.submit "Create course", class: "btn" %>
+      <% end %>
+    </div>
+  </div>
+</body>

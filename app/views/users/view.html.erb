@@ -1,0 +1,21 @@
+<body class="view">
+  
+  <% if current_user && current_user.is_professor? %>
+    <div class="professor">
+      <div class="push"></div>
+      <div>
+        <%= link_to(image_tag("icon7.png", :style => 'width: 20%; height: 15%;'), courses_path) %> 
+        <%= link_to(image_tag("Icon2.png", :style => 'width: 20%; height: 15%;'), pb_index_path) %>
+        <%= link_to(image_tag("icon6.png", :style => 'width: 20%; height: 15%;'), f_index_path) %>
+      </div>
+    </div>
+  <% else %>
+    <div class="student">
+      <div class="push"></div>
+        <%= link_to(image_tag("icon3.png", :style => 'width: 20%; height: 15%;'), p_index_path) %>
+        <%= link_to(image_tag("icon7.png", :style => 'width: 20%; height: 15%;'), c_index_path) %>
+        <%= link_to(image_tag("icon6.png", :style => 'width: 20%; height: 15%;'), rapidfire_path) %>
+        <%= link_to(image_tag("Icon1.png", :style => 'width: 20%; height: 15%;'), '#') %>
+    </div>
+  <% end %>
+</body>
